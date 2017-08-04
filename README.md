@@ -19,7 +19,9 @@
 本人推荐两个制作二维码的网址
 
 草料二维码：http://cli.im
+
 联图网：http://www.liantu.com
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/美食街二维码.png)
 如果没有个人/公司网站可以上传上述html网页文件，请继续浏览以下内容；如果已经有了相应网站，那么你可以直接制作相应二维码了。
 
@@ -28,43 +30,56 @@
 1. 注册一个github账号：https://github.com
 
 2. 创建一个工程
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_1.png)
 
 3. 填写相关工程信息创建工程
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_2.png)
 
 4. 进入工程页面复制工程的git链接
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_3.png)
 
 5. 利用git工具（本例使用Mac系统下的Tower）clone工程
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_4.png)
 
 6. 进入本地工程文件夹可以看到工程已经被clone下来了，不过目前只有一个初始的说明文件
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_7.png)
 
 7. 将之前建好的html文件导入本地工程文件夹
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_8.png)
 
 8. 进入Tower填写相关信息并提交文件到github库中
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_9.png)
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_10.png)
 
 9. 刷新github工程网页可以看到文件已经提交成功
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_11.png)
 
 10. 点击Settings进入工程设置页面
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_12.png)
 
 11. 滚动到GitHub Pages项
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_13.png)
 
 12. 选择分支并保存
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_14.png)
 
 13. 保存完后可以看到工程对应的网址链接
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_16.png)
 
 14. 直接在该链接后拼接之前创建的html文件即可生成最终链接，用最终链接生成的二维码就可实现自动跳转的功能了。欢迎大家通过图中二维码下载美食街App哦，不过目前只有iOS版。
+
 ![image](https://github.com/xiaze/autodownload/raw/master/image/Snip20170804_17.png)
 
 本文测试地址：https://xiaze.github.io/autodownload/index.html
