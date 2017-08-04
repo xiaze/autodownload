@@ -11,68 +11,7 @@
 我们可以编写一个html网页，通过js识别当前终端属性，根据相应终端属性重定向到相应下载界面。然后将该html网页上传至网站，生成该网页链接的二维码图片，用户扫描二维码会自动进入对应下载界面。
 
 三、代码部分：index.html
-
-<!DOCTYPE HTML>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<title>美食街 - 厨房菜谱大全</title>
-<script type="text/javascript">
-// 获取终端的相关信息
-var Terminal = {
-// 辨别移动终端类型
-platform : function(){
-var u = navigator.userAgent, app = navigator.appVersion;
-return {
-// android终端或者uc浏览器
-android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
-// 是否为iPhone或者QQHD浏览器
-iPhone: u.indexOf('iPhone') > -1 ,
-// 是否iPad
-iPad: u.indexOf('iPad') > -1
-};
-}(),
-// 辨别移动终端的语言：zh-cn、en-us、ko-kr、ja-jp...
-language : (navigator.browserLanguage || navigator.language).toLowerCase()
-}
-
-// 根据不同的终端，跳转到不同的地址
-var theUrl = 'https://itunes.apple.com/app/id1247266869';
-if(Terminal.platform.android){//安卓端
-document.write('抱歉，“美食街 - 厨房菜谱大全”暂时没有安卓版APP!');
-//theUrl = 'https://itunes.apple.com/app/id1247266869';
-//location.href = theUrl;
-} else {
-if(Terminal.platform.iPhone){//iPhone端
-theUrl = 'https://itunes.apple.com/app/id1247266869';
-}else if(Terminal.platform.iPad){//iPad端
-// 还可以通过language，区分开多国语言版
-switch(Terminal.language){
-case 'en-us'://iPad英文版APP Store地址
-theUrl = 'https://itunes.apple.com/app/id1247266869';
-break;
-case 'ko-kr'://iPad韩语版APP Store地址
-theUrl = 'https://itunes.apple.com/app/id1247266869';
-break;
-case 'ja-jp'://iPad日文版APP Store地址
-theUrl = 'https://itunes.apple.com/app/id1247266869';
-break;
-default://iPad默认APP Store地址
-theUrl = 'https://itunes.apple.com/app/id1247266869';
-}
-}
-
-location.href = theUrl;
-}
-
-</script>
-</head>
-<body>
-<!--
- 
- -->
-</body>
-</html>
+(见工程文件）
 在使用的时候将相应链接替换即可
 
 四、制作二维码
