@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <title>简听 - 懒人听网页听小说的神器</title>
     <script type="text/javascript">
+        //声明_czc对象:
+        var _czc = _czc || [];
+        //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+        _czc.push(["_setAccount", "1275487845"]);
         // 获取终端的相关信息
         var Terminal = {
             // 辨别移动终端类型
@@ -26,13 +30,16 @@
         // 根据不同的终端，跳转到不同的地址
         var theUrl = 'https://itunes.apple.com/cn/app/id1299542018';
         if (Terminal.platform.android) {//安卓端
+            _czc.push(['_trackEvent', '简听', '下载', 'Android']);
             document.write('“简听”安卓版APP开发中，敬请期待！');
             //theUrl = 'https://itunes.apple.com/app/id1247266869';
             //location.href = theUrl;
         } else {
             if (Terminal.platform.iPhone) {//iPhone端
+                _czc.push(['_trackEvent', '简听', '下载', 'iPhone']);
                 theUrl = 'https://itunes.apple.com/cn/app/id1299542018';
             } else if (Terminal.platform.iPad) {//iPad端
+                _czc.push(['_trackEvent', '简听', '下载', 'iPad']);
                 // 还可以通过language，区分开多国语言版
                 switch (Terminal.language) {
                     case 'en-us'://iPad英文版APP Store地址
@@ -47,6 +54,8 @@
                     default://iPad默认APP Store地址
                         theUrl = 'https://itunes.apple.com/cn/app/id1299542018';
                 }
+            } else {
+                _czc.push(['_trackEvent', '简听', '下载', 'Other']);
             }
 
             location.href = theUrl;
